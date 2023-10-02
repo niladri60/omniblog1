@@ -1,0 +1,31 @@
+.about-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+  }
+  
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #333;
+    font-family: "Lora", serif;
+  }
+  
+  .aboutContent {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #333;
+    margin-top: 80px;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+    
+    p {
+      font-size: 1rem;
+    }
+  }
