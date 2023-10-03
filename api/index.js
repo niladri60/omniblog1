@@ -1,11 +1,14 @@
-const express = require('express')
-const app = express()
-const port = 3000
+const express = require("express");
+const app = express();
+const dotenv = require("dotenv");
+const mongoose = require("mongoose");
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+dotenv.config();
+mongoose.connect(process.env.Mongo_Url, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+}).then(console.log("Connected to MongoDB")).catch((err) => console.log(err));
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+app.listen(5000, () => {
+  console.log(`Backend in running on port 5000`);
+});
